@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>倒排索引</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-theme.css" rel="stylesheet">
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$(window).resize();
+	});
+</script>
+<script>
+	$(window).resize(function() {
+		$("#mydiv").css({
+			position : "absolute",
+			left : ($(window).width() - $("#mydiv").outerWidth()) / 2,
+			top : ($(window).height() - $("#mydiv").outerHeight()) / 2
+		});
+	});
+</script>
+
+
+</head>
+<body
+	style="background-repeat: no-repeat; background-size: 100% 100%; background-attachment: fixed;"
+	onload="$(window).resize()">
+
+	<center>
+		<img src="picture/1.jpg">
+	</center>
+	
+	<div class="row" id="mydiv">
+		<form method="post" action="索引结果.jsp" target="_blank">
+			<div class="col-sm-9">
+				<input type="text" placeholder="输入要索引的内容……" class="form-control"
+					size="70" name="searchText" id="text1">
+			</div>
+			<div class="col-sm-3">
+				<button type="submit" class="btn btn-info" style="width: 80px"
+					name="submitButton" id="sub1">搜索</button>
+			</div>
+		</form>
+	</div>
+
+</body>
+</html>
